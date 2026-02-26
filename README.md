@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -34,3 +35,63 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+=======
+# Scroll Hero
+
+A high-performance scroll-driven hero section inspired by modern motion design principles.
+
+## 🚀 Overview
+
+This project recreates a premium hero section with:
+
+- Staggered headline intro animation
+- Sequential statistic reveals
+- Scroll-linked motion using GSAP ScrollTrigger
+- Smooth transform-based animations
+- Performance-focused architecture
+
+The animation is tied directly to scroll progress (scrub-based), ensuring fluid and natural interaction.
+
+---
+
+## 🛠 Tech Stack
+
+- Next.js
+- React
+- Tailwind CSS
+- GSAP + ScrollTrigger
+
+---
+
+## 🎯 Key Features
+
+- Scroll-driven animation (scrub-based)
+- Transform-only motion (no layout thrashing)
+- Staggered intro animation
+- Parallax-style visual movement
+- Optimized performance
+- Clean component structure
+
+---
+
+## ⚡ Performance Considerations
+
+- Only `transform` and `opacity` are animated
+- No raw scroll event listeners
+- GSAP context cleanup to prevent memory leaks
+- Optimized for smooth 60fps motion
+
+---
+
+## 🌍 Live Demo
+
+[Live Website Link Here]
+
+---
+
+## 📦 Installation
+
+```bash
+npm install
+npm run dev
+>>>>>>> 3304940ce2ebb4152bbc05bce0387abb5e6b5115
