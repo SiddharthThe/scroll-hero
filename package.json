@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "dist": "node scripts/copy-out-to-dist.mjs",
+    "build:dist": "npm run build && npm run dist",
     "start": "next start",
     "lint": "eslint"
   },
