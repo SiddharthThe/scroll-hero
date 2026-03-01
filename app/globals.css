@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050505;
+  --background: #0d0d0d;
   --foreground: #ededed;
 }
 
@@ -12,15 +12,25 @@
   --font-mono: var(--font-geist-mono);
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* GSAP ScrollTrigger needs vertical scroll; suppress horizontal bleed */
+  overflow-x: hidden;
+  /* Smooth text rendering at all sizes */
+  text-rendering: optimizeLegibility;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* Prevent horizontal overflow from animated elements */
-html {
+  /* Prevent FOUC jank during GSAP pin spacer insertion */
   overflow-x: hidden;
 }
