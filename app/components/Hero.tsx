@@ -52,7 +52,8 @@ export default function Hero() {
   const statsWrapRef = useRef<HTMLDivElement | null>(null);
   const didInit = useRef(false);
 
-  const [carSrc, setCarSrc] = useState("/porsche.png");
+  // Use a relative URL so static exports work under subpaths (e.g. GitHub Pages).
+  const [carSrc, setCarSrc] = useState("porsche.png");
 
   useLayoutEffect(() => {
     if (didInit.current) return;
@@ -363,7 +364,7 @@ export default function Hero() {
             draggable={false}
             onError={() => {
               // If the asset is missing, avoid looping through broken fallbacks.
-              setCarSrc("/porsche.png");
+              setCarSrc("porsche.png");
             }}
           />
         </div>

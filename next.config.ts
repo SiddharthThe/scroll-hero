@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const nextConfig: NextConfig = {
   // GSAP ScrollTrigger pin:true physically moves DOM nodes.
   // React 18 Strict Mode double-invokes effects in dev, which puts React's
@@ -11,6 +13,10 @@ const nextConfig: NextConfig = {
   // (Note: `next start` is not used with static exports.)
   output: "export",
   trailingSlash: true,
+
+  // Optional: set for GitHub Pages (e.g. "/<repo>")
+  basePath,
+  assetPrefix: basePath,
 };
 
 export default nextConfig;
